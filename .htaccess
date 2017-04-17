@@ -1,0 +1,16 @@
+# This file goes in htdocs/yourfolder
+
+# The url till http://localhost/yourfolder IS ASSUMED
+
+DirectoryIndex direct.html
+# If this directory is asked, please show this file
+
+Options -Indexes
+# If someone tries to browse server directories, then throw 403 (forbidden)
+
+RewriteEngine On
+# Allow all forms of custom URL rewriting
+
+RewriteRule ^(rest)/search/([a-zA-Z]+) layout.php?search=$2
+RewriteRule ^(rest)/home home.php
+RewriteRule ^(rest)/list list.html

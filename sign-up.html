@@ -1,0 +1,81 @@
+<html>
+    
+<body>
+    <title>SignUp</title>
+<style>
+    
+    body{
+        background-size: 100% 100% ;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-image: url(../images/hd-beautiful-book-wallpapers_background-images-22.jpg);
+        }
+    fieldset 
+    { 
+    color: white;
+    width: 350px;
+    height:600px; 
+    border: 10px solid white; 
+    border-radius: 10px; 
+    padding: 20px; 
+    text-align: left;
+    margin-left:36%;
+    margin-top: 8%;
+    } 
+    
+#details
+    {
+        width:150px;
+    }
+
+.title
+    { 
+        float: left; width: 50px; text-align: left; padding-right:10px;  
+    }
+     
+    div 
+    { 
+          padding-bottom: 10px; 
+          width: 260px;
+          margin-left:50px;
+          font-family: arial;
+          font-size: 150%;
+          line-height: 40px;
+    }    
+    #submit_button{
+        height: 60px;
+    }
+    input.form{
+        width: 250px;
+        height: 30px;
+        border-radius: 10px;
+    }
+</style>
+    
+    
+<form action="insert_into.php" method="post">
+<fieldset> 
+    <legend><img src="../images/details_button.png" id="details">   </legend>  
+      <form action="Milind/page1" action="post"> 
+        <div>UserName: <br/><input class="form" type="text" id="name" name="name" placeholder="Enter Your Name" required /> 
+        </div> 
+        <div>Password: <br/><input class="form" type="password" id="password" name="password" placeholder="Enter Your Password" required/> 
+        </div>
+        <div>
+            Confirm Password: <br/><input class="form" type="password" id="Repassword" name="password1" placeholder="Confirm Password" required/>
+        </div>
+        <div>
+            Email: <br/><input class="form" type="email" id="email" name="email" placeholder= "Enter Your email id" required/> 
+        </div><br/>
+        <div>
+            Mobile Number: <br/><input class="form" type="tel" name="Phone" placeholder="Enter your mobile number" required/>
+        </div><br/>
+        <div><center><input type=image src="../images/sign-up.png" id="submit_button"></center></div>
+</fieldset> 
+</form>   
+</body>
+
+  
+
+
+</html>

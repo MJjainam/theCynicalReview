@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+<link rel="stylesheet" href="../css/home.css"/>
+	<title>List</title>
+	<script>
+		count=0;
+			scrollamt=100;
+			function getContent(){
+			if(document.body.scrollTop>scrollamt || document.documentElement.scrollTop>scrollamt)
+					{xhr=new XMLHttpRequest();
+					xhr.onreadystatechange=showContent;
+					xhr.open("GET","../context.php?count="+count++,true);
+					xhr.send();
+					
+					}
+			}
+			
+			function showContent(){
+				if(xhr.readyState==4 && xhr.status==200){
+				
+					// document.getElementById("content").innerHTML+=xhr.responseText;
+					res = xhr.responseText.split("\n");
+					for(i in res){
+						document.getElementById("content").innerHTML+="<p>"+res[i]+"</p>";
+					}
+					scrollamt+=250;
+				
+				}
+			
+			
+			}
+
+
+
+			window.onscroll=getContent;
+
+	</script>
+</head>
+
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="logo">
+			<a href="home"><img src="../images/tcr12.jpg" id="logo"></img></a>
+		</div>
+		<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+            </button>
+			<a href="" class="navbar-brand">The Cynical Review</a>
+		</div>
+		 <div class="collapse navbar-collapse navbar-right">
+		<ul class="nav navbar-nav">
+			<li><a href="../about.html">About us</a></li>
+			<li>
+				<a href="" class="dropdown-toggle" data-toggle="dropdown">Genre <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="../horror.html">Horror</a></li>
+					<li><a href="../scifi.html">Sci-Fi</a></li>
+					<li><a href="../action.html">Action</a></li>
+					<li><a href="../romantic.html">Romantic</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="" class="dropdown-toggle" data-toggle="dropdown">Classics <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="../80.html">80's</a></li>
+					<li><a href="../90.html">90's</a></li>
+					<li><a href="../2000.html">y2k</a></li>
+					<li class="divider"></li>
+					<li><a href="../top10.html">Top 10</a></li>
+				</ul>
+			</li>
+			<li><a href="../about.html#contactus">Contact us</a></li>
+			<li><a href="../logout.php">Logout</a></li>
+			</ul>
+			<form action="../layout.php" method="get" class="navbar-form navbar-left">
+				<div class="form-group">
+					<span class="glyphicon glyphicon-search" id="ico"></span> <input type="text" class="form-control" placeholder="Search" id="search" name="search"/> 
+				</div>
+			</form>
+		</div>
+	</div>	
+	</nav>	<!-- end of nav bar -->
+	<div class="content container"></div>
+	<div class="content container"></div>
+	
+<body>
+<div class="container">
+<p>
+Raging Bull (Issue 167, May 2003)</p><p>
+Gone with the Wind (Issue 168, June 2003)</p><p>
+The Shawshank Redemption (Issue 170, August 2003)</p><p>
+Casablanca (Issue 171, September 2003)</p><p>
+Blade Runner (Issue 172, October 2003)</p><p>
+La Dolce Vita (Issue 173, November 2003)</p><p>
+The Shining (Issue 174, December 2003)</p><p>
+The Third Man (Issue 175, January 2004)</p><p>
+The 400 Blows (Issue 176, February 2004)</p><p>
+His Girl Friday (Issue 177, March 2004)</p><p>
+Schindler's List (Issue 178, April 2004)</p><p>
+The Godfather (Issue 180, June 2004)</p><p>
+King Kong (Issue 181, July 2004)</p><p>
+Seven Samurai (Issue 182, August 2004)</p><p>
+Fight Club (Issue 183, September 2004)</p><p>
+Tokyo Story (Issue 184, October 2004)</p><p>
+Annie Hall (Issue 185, November 2004)</p><p>
+Bride of Frankenstein (Issue 186, December 2004)</p><p>
+It's a Wonderful Life (Issue 187, January 2005)</p><p> (incorrectly labelled as No. 18 in the magazine)</p><p>
+This Is Spinal Tap (Issue 188, February 2005)</p><p>
+The Silence of the Lambs (Issue 189, March 2005)</p><p>
+L'Atalante (Issue 190, April 2005)</p><p>
+L.A. Confidential (Issue 191, May 2005)</p><p>
+The Searchers (Issue 192, June 2005)</p><p>
+Do The Right Thing (Issue 193, July 2005)</p><p>
+Brief Encounter (Issue 194, August 2005)</p><p>
+Brazil (Issue 195, September 2005)</p><p>
+On the Waterfront (Issue 199, January 2006)</p><p>
+One Flew Over the Cuckoo's Nest (Issue 200, February 2006)</p><p>
+Rome, Open City (Issue 201, March 2006)</p><p>
+The General (Issue 202, April 2006)</p><p>
+Deliverance (Issue 203, May 2006)</p><p>
+The French Connection (Issue 204, June 2006)</p><p>
+The Battle of Algiers (Issue 205, July 2006)</p><p>
+Das Boot (Issue 206, August 2006)</p><p>
+Don't Look Now (Issue 207, September 2006)</p><p>
+Vertigo (Issue 208, October 2006)</p><p>
+The Lord of the Rings (Issue 209, November 2006)</p><p>
+Some Like It Hot (Issue 210, December 2006)</p><p>
+The Wizard of Oz (Issue 211, January 2007)</p><p>
+The Wages of Fear (Issue 212, February 2007)</p><p>
+Belle de jour (Issue 213, March 2007)</p><p>
+The Spirit of the Beehive (Issue 214, April 2007)</p><p>
+Die Hard (Issue 215, May 2007)</p><p>
+A Clockwork Orange (Issue 216, June 2007)</p><p>
+Performance (Issue 217, July 2007)</p><p>
+Bringing Up Baby (Issue 218, August 2007)</p><p>
+The Good, the Bad and the Ugly (Issue 219, September 2007)</p><p>
+The Big Sleep (Issue 220, October 2007)</p><p>
+Days of Heaven (Issue 221, November 2007)</p><p>
+The Cabinet of Dr. Caligari (Issue 222, December 2007)</p><p>
+Bicycle Thieves (Issue 223, January 2008)</p><p>
+Cabaret (Issue 224, February 2008)</p><p>
+The Wild Bunch (Issue 225, March 2008)</p><p>
+Glengarry Glen Ross (Issue 226, April 2008)</p><p>
+The Fly (Issue 227, May 2008)</p><p>
+Out of the Past (Issue 228, June 2008)</p><p>
+Rear Window (Issue 229, July 2008)</p><p>
+Forbidden Planet (Issue 230, August 2008)</p><p>
+The Night of the Hunter (Issue 231, September 2008)</p><p>
+Network (Issue 232, October 2008)</p><p>
+Kind Hearts and Coronets (Issue 233, November 2008)</p><p>
+Dr. Strangelove or How I Learned to Stop Worrying and Love the Bomb (Issue 234, December 2008)</p><p>
+Rio Bravo (Issue 235, January 2009)</p><p>
+8½ (Issue 236, February 2009)</p><p>
+Spartacus (Issue 237, March 2009)</p><p>
+The Birds (Issue 238, April 2009)</p><p>
+Goodfellas (Issue 239, May 2009)</p><p>
+The Treasure of the Sierra Madre (Issue 241, July 2009)</p><p>
+Amadeus (Issue 242, August 2009)</p><p>
+To Kill a Mockingbird (Issue 243, September 2009)</p><p>
+Suspiria (Issue 244, October 2009)</p><p>
+Kiss Me Deadly (Issue 245, November 2009)</p><p>
+Magnolia (Issue 247, January 2010)</p><p>
+All About Eve (Issue 248, February 2010)</p><p>
+All the President's Men (Issue 249, March 2010)</p><p>
+Fitzcarraldo (Issue 250, April 2010)</p><p>
+McCabe & Mrs. Miller (Issue 251, May 2010)</p><p>
+Rififi (Issue 252, June 2010)</p><p>
+The Dirty Dozen (Issue 253, July 2010)</p><p>
+Now, Voyager (Issue 254, August 2010)</p><p>
+Stagecoach (Issue 255, September 2010)</p><p>
+Solaris (Issue 256, October 2010)</p><p>
+The Court Jester (Issue 257, November 2010)</p><p>
+Knife in the Water (Issue 258, December 2010)</p><p>
+Stalag 17 (Issue 259, January 2011)</p><p>
+Sleeper (Issue 260, February 2011)</p><p>
+Lost Horizon (Issue 261, March 2011)</p><p>
+Nashville (Issue 262, April 2011)</p><p>
+Chinatown (Issue 263, May 2011)</p><p>
+Double Indemnity (Issue 264, June 2011)</p><p>
+The African Queen (Issue 265, July 2011)</p><p>
+Sunset Boulevard (Issue 266, August 2011)</p><p>
+Witness (Issue 267, September 2011)</p><p>
+Manhattan (Issue 268, October 2011)</p><p>
+When Harry Met Sally... (Issue 269, November 2011)</p><p>
+Passport to Pimlico (Issue 270, December 2011)</p><p>
+Fargo (Issue 271, January 2012)</p><p>
+Mr. Smith Goes to Washington (Issue 272, February 2012)</p><p>
+E.T.: The Extra-Terrestrial (Issue 273, March 2012)</p>
+</div>
+<div class="container" id="content"></div>
+<footer class="foot">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<h3>Navigate</h3>
+				<ul>
+					<li><a href="home">Home</a></li>
+					<li><a href="../about.html">About us</a></li>
+					<li><a href="../about.html#contactus">Contact us</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<h3>Services</h3>
+				<ul>
+					<li><a href="home">Search a movie</a></li>
+					<li><a href="../add.php">Rate a movie</a></li>
+					<li><a href="../add.php">Add a movie</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<h3>Genre</h3>
+				<ul>
+					<li><a href="../horror.html">Horror</a></li>
+					<li><a href="../scifi.html">Sci-Fi</a></li>
+					<li><a href="../action.html">Action</a></li>
+					<li><a href="../romantic.html">Romantic</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<h3>Classics</h3>
+				<ul>
+					<li><a href="../80.html">80's</a></li>
+					<li><a href="../90.html">90's</a></li>
+					<li><a href="../2000.html">y2k</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<footer class="trademark">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				&copy;2015 The Cynical Review. All Rights Reserved &reg;
+			</div>
+			<div class="col-sm-6">
+				<ul class="pull-right">
+					<li><a href="../about.html#contactus">Contact us</a></li>
+					<li><a href="../about.html">About us</a></li>
+					<li><a href="home">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!-- <script src="../js/script.js"></script> -->
+</body>
+</html>
